@@ -1,7 +1,7 @@
 <table width="100%">
   <tr>
     <td align="center" width="15%">
-      <img src="./assets/images/GJS.png" alt="GJS Logo Left" width="80" />
+      <img src="../../assets/images/GJS.png" alt="GJS Logo Left" width="80" />
     </td>
     <td align="center">
       <h1>GJS: Gotcha Chatbot Service 🌱</h1>
@@ -17,10 +17,6 @@
   <a href="#">
     <img src="./assets/images/GJS_BANNER_.png" alt="GJS Banner" width="100%" />
   </a>
-</p>
-
-<p align="center">
-  <a href="./assets/intro/README_en.md">🇺🇸 English</a> | <a href="./assets/intro/README_kr.md">🇰🇷 한국어</a>
 </p>
 
 ---

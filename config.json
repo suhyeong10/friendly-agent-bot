@@ -1,0 +1,19 @@
+{
+    "mcpServers": {
+        "spotify": {
+            "command": "python",
+            "args": ["./mcp_tools/spotify.py"],
+            "transport": "stdio"
+        },
+        "place": {
+            "command": "python",
+            "args": ["./mcp_tools/naver_place.py"],
+            "transport": "stdio"
+        },
+        "search": {
+            "command": "python",
+            "args": ["./mcp_tools/search.py"],
+            "transport": "stdio"
+        }
+    }
+}
