@@ -4,18 +4,18 @@
       <img src="../../assets/images/GJS.png" alt="GJS Logo Left" width="80" />
     </td>
     <td align="center">
-      <h1>GJS: Gotcha Chatbot Service 🌱</h1>
+      <h1>GJS: 깃헙에 NLP 잔디심기 🌱</h1>
       <p><em>Emotion-aware tool-augmented chatbot on Discord</em></p>
     </td>
     <td align="center" width="15%">
-      <img src="./assets/images/GJS.png" alt="GJS Logo Right" width="80" />
+      <img src="../../assets/images/GJS.png" alt="GJS Logo Right" width="80" />
     </td>
   </tr>
 </table>
 
 <p align="center">
   <a href="#">
-    <img src="./assets/images/GJS_BANNER_.png" alt="GJS Banner" width="100%" />
+    <img src="../../assets/images/GJS_BANNER_.png" alt="GJS Banner" width="100%" />
   </a>
 </p>
 
