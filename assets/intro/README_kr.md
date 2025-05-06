@@ -1,21 +1,21 @@
 <table width="100%">
   <tr>
     <td align="center" width="15%">
-      <img src="./GJS.png" alt="GJS 로고 왼쪽" width="80" />
+      <img src="../../assets/images/GJS.png" alt="GJS 로고 왼쪽" width="80" />
     </td>
     <td align="center">
-      <h1>GJS: 갓챗에 NLP 잔디심기 🌱</h1>
+      <h1>GJS: 깃헙에 NLP 잔디심기 🌱</h1>
       <p><em>감정 기반 툴 챗봇, Discord 위에서 작동</em></p>
     </td>
     <td align="center" width="15%">
-      <img src="./GJS.png" alt="GJS 로고 오른쪽" width="80" />
+      <img src="../../assets/images/GJS.png" alt="GJS 로고 오른쪽" width="80" />
     </td>
   </tr>
 </table>
 
 <p align="center">
   <a href="#">
-    <img src="./GJS_BANNER_.png" alt="GJS 배너" width="100%" />
+    <img src="../../assets/images/GJS_BANNER_.png" alt="GJS 배너" width="100%" />
   </a>
 </p>
 
