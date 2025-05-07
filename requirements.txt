@@ -179,7 +179,6 @@ tensorboard-data-server==0.7.2
 tensorboardX==2.6.2.2
 tensorflow==2.19.0
 tensorflow-io-gcs-filesystem==0.31.0
-tensorflow_intel==2.18.0
 termcolor==2.5.0
 tf_keras==2.19.0
 threadpoolctl==3.5.0
