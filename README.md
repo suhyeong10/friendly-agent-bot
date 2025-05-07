@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <a href="./assets/intro/README_en.md">🇺🇸 English</a> | <a href="./assets/intro/README_kr.md">🇰🇷 한국어</a>
+  <a href="./assets/intro/README_en.md"> English</a> | <a href="./assets/intro/README_kr.md"> 한국어</a>
 </p>
 
 ---
