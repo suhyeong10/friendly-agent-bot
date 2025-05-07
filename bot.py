@@ -1,4 +1,5 @@
 import os
+import json
 import base64
 import asyncio
 import logging
@@ -23,6 +24,11 @@ load_dotenv()
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+intents = discord.Intents.default()
+intents.messages = True
+intents.message_content = True
+
+client = discord.Client(intents=intents)
 
 system_prompt = """
 ## Instructions
@@ -158,12 +164,25 @@ def get_agent(
 
     return agent_with_chat_history
 
-# 디스코드 클라이언트 설정
-intents = discord.Intents.default()
-intents.messages = True
-intents.message_content = True
+def chat_log(session_id: str, user_input: str, ai_output: str):
+    file_path = os.path.join("training_logs", f"{session_id}.json")
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-client = discord.Client(intents=intents)
+    log_entry = {
+        "user": user_input,
+        "ai": ai_output
+    }
+
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            logs = json.load(f)
+    else:
+        logs = []
+
+    logs.append(log_entry)
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(logs, f, ensure_ascii=False, indent=2)
 
 async def show_typing(channel, stop_event: asyncio.Event):
     while not stop_event.is_set():
@@ -265,6 +284,8 @@ async def on_message(message):
                 store[session_id].add_ai_message(AIMessage(content=response.content))
 
                 await message.channel.send(response.content)
+
+                chat_log(session_id, content, response.content)
             else:
                 await message.channel.send("⚠️ 지금은 이미지 파일만 분석할 수 있어!")
                 return
@@ -279,6 +300,8 @@ async def on_message(message):
 
             output = result.get("output", str(result)) if isinstance(result, dict) else str(result)
             await message.channel.send(output)
+
+            chat_log(session_id, content, output)
 
     finally:
         stop_typing.set()
