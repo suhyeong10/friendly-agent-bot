@@ -275,10 +275,19 @@ async def on_message(message):
                     {"type": "image_url", "image_url": {"url": image_data_url}}
                 ]
 
-                response = await llm.ainvoke([
-                    {"role": "system", "content": system_prompt.strip()},
-                    {"role": "user", "content": user_msg}
-                ])
+                response = await llm_img.ainvoke(
+                    [
+                        {"role": "system", "content": system_prompt.strip()},
+                        {"role": "user", "content": user_msg}
+                    ],
+                    config={
+                        "configurable": {"session_id": session_id},
+                        "get_session_history": get_session_history
+                    }
+                )
+
+                if session_id not in store:
+                    store[session_id] = ChatMessageHistory()
 
                 store[session_id].add_user_message(HumanMessage(content=content))
                 store[session_id].add_ai_message(AIMessage(content=response.content))
