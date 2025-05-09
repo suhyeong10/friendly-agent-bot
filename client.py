@@ -275,7 +275,7 @@ async def on_message(message):
                     {"type": "image_url", "image_url": {"url": image_data_url}}
                 ]
 
-                response = await llm_img.ainvoke(
+                response = await llm.ainvoke(
                     [
                         {"role": "system", "content": system_prompt.strip()},
                         {"role": "user", "content": user_msg}
