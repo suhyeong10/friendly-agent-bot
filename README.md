@@ -62,6 +62,13 @@ FRIENDLY-AGENT-BOT/
 
 ---
 
+## System Architecture
+<p align="center">
+  <a href="#">
+    <img src="./assets/images/system.png" alt="System" width="100%" />
+  </a>
+</p>
+
 ## ⚙️ Setup
 
 ### 1. `.env` file
