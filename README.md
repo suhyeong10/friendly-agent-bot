@@ -65,7 +65,7 @@ FRIENDLY-AGENT-BOT/
 ## System Architecture
 <p align="center">
   <a href="#">
-    <img src="./assets/images/system.png" alt="System" width="100%" />
+    <img src="./assets/images/system_.png" alt="System" width="100%" />
   </a>
 </p>
 
